@@ -30,6 +30,9 @@ allprojects {
         mavenCentral()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+        maven {
+            url "https://jitpack.io" 
+        }
     }
 }
 
@@ -45,6 +48,8 @@ project(":desktop") {
         compile "com.badlogicgames.gdx:gdx-controllers-platform:$gdxVersion:natives-desktop"
         compile "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+        compile 'com.github.jordw:heftydb:-SNAPSHOT'
+        compile 'com.google.code.gson:gson:2.4'
     }
 }
 
@@ -62,6 +67,8 @@ project(":core") {
         compile "aurelienribon:tweenengine:6.3.3"
         compile "aurelienribon:tweenengine:6.3.3:sources"
         compile "commons-io:commons-io:$commonsIOVersion"
+        compile 'com.github.jordw:heftydb:-SNAPSHOT'
+        compile 'com.google.code.gson:gson:2.4'
     }
 }
 
